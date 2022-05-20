@@ -6,7 +6,7 @@ ENV TZ=Asia/Shanghai
 ENV PASSWORD="password" 
 
 RUN apk update && apk add tzdata bash curl && cp /usr/share/zoneinfo/"${TZ}" /etc/localtime && echo "${TZ}" > /etc/timezone && apk del tzdata
-RUN bash <(curl https://bash.ooo/nami.sh) && /root/.nami/bin install brook
+RUN bash <(curl https://bash.ooo/nami.sh) && bash <(curl https://bash.ooo/brook.sh)
 
 
 EXPOSE 443
