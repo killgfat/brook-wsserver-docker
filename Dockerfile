@@ -12,4 +12,5 @@ RUN set -ex \
 ENV TZ=Asia/Shanghai 
 ENV PASSWORD="password" 
 
+EXPOSE 443
 CMD /usr/bin/brook wsserver -l :443 -p ${PASSWORD}
