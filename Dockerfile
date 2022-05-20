@@ -10,6 +10,6 @@ RUN set -ex \
          && rm -fv /root/brook.sh   
 
 ENV TZ=Asia/Shanghai 
-ENV ARGS="wsserver -l :443 -p password0" 
+ENV PASSWORD="password" 
 
-CMD /usr/bin/brook $ARGS
+CMD /usr/bin/brook wsserver -l :443 -p ${PASSWORD}
